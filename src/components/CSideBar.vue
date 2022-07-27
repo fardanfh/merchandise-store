@@ -94,6 +94,18 @@ export default {
   data: () => ({
     items: [
       { title: "Home", icon: "mdi mdi-view-dashboard", route: "home" },
+      {
+        title: "Profile",
+        icon: "mdi mdi-account",
+        route: "profile",
+        auth: true,
+      },
+      {
+        title: "My Order",
+        icon: "mdi mdi-shopping-music",
+        route: "my-order",
+        auth: true,
+      },
       { title: "About", icon: "mdi mdi-information", route: "about" },
     ],
   }),

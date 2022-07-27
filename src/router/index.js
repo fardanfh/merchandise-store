@@ -48,6 +48,30 @@ const router = new Router({
       meta: { auth: true}
     },
     {
+      path: '/payment',
+      name: 'payment',
+      component: () => import('../views/PaymentView.vue'),
+      meta: { auth: true}
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: () => import('../views/ProfileView.vue'),
+      meta: { auth: true}
+    },
+    {
+      path: '/my-order',
+      name: 'my-order',
+      component: () => import('../views/MyOrderView.vue'),
+      meta: { auth: true}
+    },
+    {
+      path: "/order-detail/:invoice",
+      name: "order-detail",
+      component: () => import("../views/OrderDetailView.vue"),
+      meta: { auth: true },
+    },
+    {
       path: '/books',
       name: 'books',
       component: () => import('../views/BooksView.vue')

@@ -94,7 +94,7 @@ export default {
       setAuth: "auth/set",
     }),
     close() {
-      this.statusDialog(false);
+      this.setStatusDialog(false);
     },
     submit() {
       if (this.$refs.form.validate()) {
