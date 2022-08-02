@@ -13,7 +13,7 @@
           }}</v-btn>
 
           <v-flex xs12 py-3 white--text color="primary">
-            &copy;2022 - Bookstore powered by <strong>Vuetify</strong>
+            &copy;2022 - Merchandise Store powered by <strong>Vuetify</strong>
           </v-flex>
         </v-layout>
       </v-card>

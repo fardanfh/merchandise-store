@@ -8,27 +8,28 @@
         v-if="category.image"
         :src="getImage('/categories/' + category.image)"
         height="150px"
+        contain
       ></v-img>
-      <v-subheader> Books by "{{ category.name }}" category"</v-subheader>
+      <v-subheader> Merchandise by "{{ category.name }}" category"</v-subheader>
       <v-layout row wrap>
-        <v-flex v-for="book in books" xs6 :key="book.id">
-          <v-card :to="'/book' + book.slug">
-            <v-img
-              v-if="book.cover"
-              :src="getImage('/books/' + book.cover)"
-              height="150px"
+        <v-flex v-for="book in books" xs3 :key="book.id">
+          <v-card :to="'/book/' + book.slug" class="mx-auto my-2">
+            <v-img height="250" :src="getImage('/books/' + book.cover)"></v-img>
+
+            <v-card-title
+              class="d-inline-block text-truncate"
+              style="max-width: 100%"
+              >{{ book.title }}</v-card-title
             >
-              <v-container fill-height fluid pa-2>
-                <v-layout fill-height>
-                  <v-flex xs12 align-end flexbox>
-                    <span
-                      class="title white--text text-block"
-                      v-text="book.title"
-                    ></span>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-img>
+
+            <v-card-subtitle>
+              <div class="my-1 text-lg-h6">Rp. {{ book.price }}</div>
+
+              <div class="text-caption">{{ book.description }}</div>
+            </v-card-subtitle>
+
+            <v-divider class="mx-4"></v-divider>
+
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn icon>

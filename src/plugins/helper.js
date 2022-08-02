@@ -8,7 +8,7 @@ const Helper = {
 			if(image!=null && image.length>0){
 				return process.env.VUE_APP_BACKEND_URL + "/images"+ image
 			}
-				return "/img/notfound.png"
+				return "/img/unavailable.jpg"
 		}
 	}
 }

@@ -9,6 +9,7 @@
               v-if="category.image"
               :src="getImage('/categories/' + category.image)"
               height="150px"
+              contain
             >
               <v-container fill-height fluid pa-2>
                 <v-layout fill-height>
@@ -87,13 +88,6 @@ export default {
         .catch((error) => {
           console.log(error.responses);
         });
-    },
-    getImage(image) {
-      if (image != null && image.length > 0) {
-        return "http://bookstore-api.test/images" + image;
-        //return process.env.VUE_APP_BACKEND_URL+"/images"+ image
-      }
-      return "/img/unavailable.jpg";
     },
   },
   created() {

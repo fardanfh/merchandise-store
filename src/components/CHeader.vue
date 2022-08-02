@@ -12,7 +12,7 @@
     </v-btn>
 
     <!-- header bagian tengah -->
-    <v-toolbar-title class="white--text">Bookstore</v-toolbar-title>
+    <v-toolbar-title class="white--text">Merchandise Store</v-toolbar-title>
 
     <!-- separator supaya header bagian kanan posisinya rata kanan -->
     <v-spacer></v-spacer>

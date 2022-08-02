@@ -6,18 +6,15 @@
     <v-img
       v-if="book.cover"
       :src="getImage('/books/' + book.cover)"
-      height="200px"
+      height="250px"
+      contain
     ></v-img>
     <v-subheader>Information</v-subheader>
     <table class="v-data-table">
       <tbody>
         <tr>
-          <th class="text-xs-left">Author</th>
+          <th class="text-xs-left">Seller</th>
           <td>{{ book.author }}</td>
-        </tr>
-        <tr>
-          <th class="text-xs-left">Publisher</th>
-          <td>{{ book.publisher }}</td>
         </tr>
         <tr>
           <th class="text-xs-left">Price</th>
